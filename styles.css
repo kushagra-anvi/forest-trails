@@ -782,26 +782,52 @@ h3 {
 
 .sticky-actions {
   position: fixed;
-  right: 18px;
-  bottom: 18px;
-  z-index: 55;
+  right: 20px;
+  bottom: 20px;
+  z-index: 999;
   display: flex;
-  gap: 8px;
+  gap: 10px;
 }
 
 .sticky-actions a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 94px;
-  min-height: 44px;
-  padding: 0 14px;
+  min-width: 108px;
+  min-height: 46px;
+  padding: 0 18px;
   color: var(--paper);
-  background: var(--forest);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  box-shadow: 0 18px 42px rgba(15, 23, 19, 0.28);
+  border-radius: 0;
+  box-shadow: 0 8px 24px rgba(15, 23, 19, 0.22);
   font-size: 13px;
   font-weight: 900;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  letter-spacing: 0.2px;
+}
+
+.sticky-actions .btn-brochure {
+  background: var(--brass);
+}
+
+.sticky-actions .btn-call {
+  background: var(--forest);
+}
+
+.sticky-actions .btn-whatsapp {
+  background: #1ebd60;
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+.sticky-actions .btn-brochure:hover {
+  background: #c7984d;
+}
+
+.sticky-actions .btn-call:hover {
+  background: var(--forest-2);
+}
+
+.sticky-actions .btn-whatsapp:hover {
+  background: #25d366;
 }
 
 body.has-animations .topbar,
