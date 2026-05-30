@@ -267,8 +267,12 @@ body.has-animations .hero-content > :nth-child(5) {
   animation-delay: 580ms;
 }
 
+body.has-animations .hero-content > :nth-child(6) {
+  animation-delay: 690ms;
+}
+
 body.has-animations .hero-panel {
-  animation-delay: 700ms;
+  animation-delay: 810ms;
 }
 
 .eyebrow,
@@ -302,6 +306,14 @@ h1 {
   margin-bottom: 20px;
   font-size: clamp(48px, 7vw, 92px);
   line-height: 0.95;
+}
+
+.hero-kicker {
+  margin-bottom: 18px;
+  color: rgba(255, 255, 255, 0.86);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(24px, 3vw, 38px);
+  line-height: 1.08;
 }
 
 h2 {
