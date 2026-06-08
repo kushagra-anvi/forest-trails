@@ -8,9 +8,8 @@ forms.forEach((form) => {
     const formData = new FormData(form);
     const name = formData.get("name") || "Customer";
     const phone = formData.get("phone") || "";
-    const interest = formData.get("interest") || "Forest Trails Bhugaon";
     const text = encodeURIComponent(
-      `New enquiry for ${interest}\nName: ${name}\nPhone: ${phone}`
+      `Hello, I'm interested in forest trail.\nName: ${name}\nPhone: ${phone}`
     );
 
     window.location.href = `https://wa.me/917066787989?text=${text}`;
@@ -22,7 +21,7 @@ if (!reduceMotion) {
 
   const revealSets = [
     {
-      selector: ".intro-copy, .section-heading, .masterplan-copy, .location > div:first-child, .final-copy",
+      selector: ".intro-copy, .section-heading, .location > div:first-child, .final-copy",
       variant: "reveal-left",
       step: 0
     },
@@ -32,7 +31,7 @@ if (!reduceMotion) {
       step: 0
     },
     {
-      selector: ".intro-notes article, .stats-band div, .project-card, .amenity-grid article, .location-list span, .contact-lines a",
+      selector: ".intro-notes article, .project-card, .amenity-gallery figure, .location-list span, .location-list a, .contact-lines a",
       variant: "reveal",
       step: 80
     }
