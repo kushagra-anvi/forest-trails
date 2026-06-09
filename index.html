@@ -27,7 +27,7 @@
 
     <main id="home">
       <section class="hero" aria-label="Paranjape Forest Trails Bhugaon">
-        <img class="hero-image" src="assets/showcase/hero-cove-banner.jpg" alt="The Cove and Forest Trails Township overlooking green surroundings">
+        <img class="hero-image" src="assets/showcase/home-banner.jpg" alt="Paranjape Forest Trails Bhugaon township aerial view">
         <div class="hero-shade"></div>
 
         <div class="hero-content">
@@ -162,20 +162,65 @@
 
         <div class="amenity-gallery">
           <figure>
-            <img src="assets/amenities/amenity-view.jpg" alt="Forest Trails amenity view">
+            <img src="assets/amenities/grand-entrance-lobby.jpg" alt="Grand Entrance Lobby">
+            <div class="amenity-overlay">
+              <span>Grand Entrance Lobby</span>
+            </div>
           </figure>
           <figure>
-            <img src="assets/amenities/landscaped-amenity.jpg" alt="Forest Trails landscaped amenity">
+            <img src="assets/amenities/terrace-garden.jpg" alt="Terrace Garden">
+            <div class="amenity-overlay">
+              <span>Terrace Garden</span>
+            </div>
           </figure>
           <figure>
-            <img src="assets/amenities/open-space-amenity.jpg" alt="Forest Trails open space amenity">
+            <img src="assets/amenities/horse-riding.jpg" alt="Equestrian Centre & Horse Riding">
+            <div class="amenity-overlay">
+              <span>Equestrian Centre & Horse Riding</span>
+            </div>
           </figure>
           <figure>
-            <img src="assets/amenities/clubhouse-amenity.jpg" alt="Forest Trails clubhouse amenity">
+            <img src="assets/amenities/infinity-swimming-pool.jpg" alt="Infinity Swimming Pool">
+            <div class="amenity-overlay">
+              <span>Infinity Swimming Pool</span>
+            </div>
           </figure>
           <figure>
-            <img src="assets/showcase/highgardens-brand.jpg" alt="Forest Trails lifestyle amenity">
+            <img src="assets/amenities/the-cliff.jpg" alt="The Cliff – Lifestyle Club">
+            <div class="amenity-overlay">
+              <span>The Cliff – Lifestyle Club</span>
+            </div>
           </figure>
+        </div>
+
+        <div class="amenities-highlights">
+          <div class="amenities-column">
+            <h3>Key Features</h3>
+            <ul class="amenities-list">
+              <li><i data-lucide="shield-check"></i> <span>Equestrian Centre</span></li>
+              <li><i data-lucide="shield-check"></i> <span>Mountain Biking</span></li>
+              <li><i data-lucide="shield-check"></i> <span>Archery</span></li>
+              <li><i data-lucide="shield-check"></i> <span>Cafes and Shopping Centre</span></li>
+              <li><i data-lucide="shield-check"></i> <span>Shri Ravishankar Vidya Mandir School</span></li>
+              <li><i data-lucide="shield-check"></i> <span>The Cliff – Lifestyle Club</span></li>
+              <li><i data-lucide="shield-check"></i> <span>The Cliff – Fine Dining</span></li>
+            </ul>
+          </div>
+          <div class="amenities-column">
+            <h3>Key Amenities</h3>
+            <ul class="amenities-list">
+              <li><i data-lucide="shield-check"></i> <span>Swimming Pool</span></li>
+              <li><i data-lucide="shield-check"></i> <span>Pool Tables</span></li>
+              <li><i data-lucide="shield-check"></i> <span>Squash Courts</span></li>
+              <li><i data-lucide="shield-check"></i> <span>Table Tennis</span></li>
+              <li><i data-lucide="shield-check"></i> <span>Fully Equipped Gym</span></li>
+              <li><i data-lucide="shield-check"></i> <span>Open Amphitheatre</span></li>
+              <li><i data-lucide="shield-check"></i> <span>Banquet Hall</span></li>
+              <li><i data-lucide="shield-check"></i> <span>Guest Rooms</span></li>
+              <li><i data-lucide="shield-check"></i> <span>3 Badminton Courts</span></li>
+              <li><i data-lucide="shield-check"></i> <span>2 Tennis Courts</span></li>
+            </ul>
+          </div>
         </div>
       </section>
 
@@ -188,10 +233,38 @@
           </p>
         </div>
         <div class="location-list">
-          <span>Bhugaon and Paud Road access</span>
-          <span>Bavdhan and Chandani Chowk connectivity</span>
-          <span>Useful for families, senior buyers, and investors</span>
-          <a href="tel:+917066787989">Call 7066787989 for location guidance</a>
+          <div class="location-item">
+            <i data-lucide="map-pin"></i>
+            <span>Chandani Chowk – 6 mins</span>
+          </div>
+          <div class="location-item">
+            <i data-lucide="map-pin"></i>
+            <span>Bavdhan – 8 mins</span>
+          </div>
+          <div class="location-item">
+            <i data-lucide="map-pin"></i>
+            <span>Mumbai–Bangalore Highway – 10 mins</span>
+          </div>
+          <div class="location-item">
+            <i data-lucide="map-pin"></i>
+            <span>Baner – 15 mins</span>
+          </div>
+          <div class="location-item">
+            <i data-lucide="map-pin"></i>
+            <span>Hinjewadi IT Park – 25 mins</span>
+          </div>
+          <div class="location-item">
+            <i data-lucide="map-pin"></i>
+            <span>Pune Railway Station – 35 mins</span>
+          </div>
+          <div class="location-item">
+            <i data-lucide="map-pin"></i>
+            <span>Pune International Airport – 50 mins</span>
+          </div>
+          <a href="tel:+917066787989" class="location-call">
+            <i data-lucide="phone"></i>
+            <span>Call 7066787989 for location guidance</span>
+          </a>
         </div>
       </section>
 
@@ -237,11 +310,14 @@
       </div>
     </footer>
 
-    <div class="sticky-actions" aria-label="Quick contact actions">
+    <div class="sticky-left" aria-label="WhatsApp contact action">
       <a href="https://wa.me/917066787989?text=Hello%2C%20I%27m%20interested%20in%20forest%20trail." target="_blank" rel="noreferrer" class="btn-whatsapp">
         <i data-lucide="message-square" style="width: 16px; height: 16px; margin-right: 6px; display: inline-flex;"></i>
         <span>WhatsApp</span>
       </a>
+    </div>
+
+    <div class="sticky-right" aria-label="Call contact action">
       <a href="tel:+917066787989" class="btn-call">
         <i data-lucide="phone" style="width: 16px; height: 16px; margin-right: 6px; display: inline-flex;"></i>
         <span>Call</span>

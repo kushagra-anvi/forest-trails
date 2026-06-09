@@ -224,7 +224,7 @@ img {
 }
 
 .hero-content {
-  max-width: 780px;
+  max-width: 1040px;
 }
 
 body.has-animations .hero-image {
@@ -315,7 +315,7 @@ h3 {
 }
 
 .hero-copy {
-  max-width: 680px;
+  max-width: 860px;
   margin-bottom: 30px;
   color: rgba(255, 255, 255, 0.82);
   font-size: clamp(17px, 2vw, 22px);
@@ -645,10 +645,43 @@ h3 {
 }
 
 .amenity-gallery figure {
+  position: relative;
   min-height: 280px;
   margin: 0;
   overflow: hidden;
   background: #15221c;
+}
+
+.amenity-gallery figure::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: linear-gradient(to top, rgba(15, 23, 19, 0.95) 0%, rgba(15, 23, 19, 0.4) 50%, rgba(15, 23, 19, 0) 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.amenity-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 24px 16px;
+  z-index: 2;
+  text-align: center;
+}
+
+.amenity-overlay span {
+  color: var(--paper);
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.4;
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
 }
 
 .amenity-gallery img {
@@ -657,6 +690,53 @@ h3 {
   height: 100%;
   min-height: 280px;
   object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.amenity-gallery figure:hover img {
+  transform: scale(1.06);
+}
+
+.amenities-highlights {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(24px, 4vw, 64px);
+  margin-top: 54px;
+  padding-top: 54px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.amenities-column h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  color: var(--brass);
+  margin-bottom: 24px;
+  font-size: 22px;
+  letter-spacing: 0.2px;
+}
+
+.amenities-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px 20px;
+}
+
+.amenities-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.amenities-list li svg {
+  color: var(--brass);
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
 }
 
 .location {
@@ -671,15 +751,43 @@ h3 {
   display: grid;
   gap: 1px;
   background: var(--line);
+  border: 1px solid var(--line);
 }
 
-.location-list span,
+.location-item,
 .location-list a {
-  display: block;
-  padding: 22px 24px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px 24px;
   background: var(--paper);
   color: var(--forest);
   font-weight: 850;
+  font-size: 14px;
+}
+
+.location-item svg,
+.location-list a svg {
+  color: var(--forest-2);
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+}
+
+.location-list a {
+  background: var(--forest);
+  color: var(--paper);
+  justify-content: center;
+  transition: background 220ms ease;
+  font-weight: 900;
+}
+
+.location-list a svg {
+  color: var(--paper);
+}
+
+.location-list a:hover {
+  background: var(--forest-2);
 }
 
 .final-cta {
@@ -786,16 +894,23 @@ h3 {
   background: var(--paper);
 }
 
-.sticky-actions {
+.sticky-left,
+.sticky-right {
   position: fixed;
-  right: 20px;
   bottom: 20px;
   z-index: 999;
-  display: flex;
-  gap: 10px;
 }
 
-.sticky-actions a {
+.sticky-left {
+  left: 20px;
+}
+
+.sticky-right {
+  right: 20px;
+}
+
+.sticky-left a,
+.sticky-right a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -811,25 +926,26 @@ h3 {
   letter-spacing: 0.2px;
 }
 
-.sticky-actions .btn-call {
+.sticky-right .btn-call {
   background: var(--forest);
 }
 
-.sticky-actions .btn-whatsapp {
+.sticky-left .btn-whatsapp {
   background: #1ebd60;
   border-color: rgba(255, 255, 255, 0.18);
 }
 
-.sticky-actions .btn-call:hover {
+.sticky-right .btn-call:hover {
   background: var(--forest-2);
 }
 
-.sticky-actions .btn-whatsapp:hover {
+.sticky-left .btn-whatsapp:hover {
   background: #25d366;
 }
 
 body.has-animations .topbar,
-body.has-animations .sticky-actions {
+body.has-animations .sticky-left,
+body.has-animations .sticky-right {
   transition:
     background-color 240ms ease,
     box-shadow 240ms ease,
@@ -882,7 +998,8 @@ body.has-animations .reveal-scale.is-visible {
   .amenity-gallery figure,
   .primary-btn,
   .secondary-btn,
-  .sticky-actions a {
+  .sticky-left a,
+  .sticky-right a {
     transition:
       transform 220ms ease,
       box-shadow 220ms ease,
@@ -901,7 +1018,8 @@ body.has-animations .reveal-scale.is-visible {
 
   .primary-btn:hover,
   .secondary-btn:hover,
-  .sticky-actions a:hover {
+  .sticky-left a:hover,
+  .sticky-right a:hover {
     transform: translateY(-2px);
   }
 }
@@ -1024,6 +1142,27 @@ body.has-animations .reveal-scale.is-visible {
     min-height: 145px;
   }
 
+  .amenity-overlay {
+    padding: 12px 8px;
+  }
+
+  .amenity-overlay span {
+    font-size: 11px;
+    letter-spacing: 0.5px;
+  }
+
+  .amenities-highlights {
+    grid-template-columns: 1fr;
+    gap: 36px;
+    margin-top: 36px;
+    padding-top: 36px;
+  }
+
+  .amenities-list {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
   .footer {
     padding-bottom: 84px;
   }
@@ -1038,15 +1177,24 @@ body.has-animations .reveal-scale.is-visible {
     height: 82px;
   }
 
-  .sticky-actions {
-    left: 10px;
-    right: 10px;
-    bottom: 10px;
+  .sticky-left,
+  .sticky-right {
+    bottom: 12px;
   }
 
-  .sticky-actions a {
-    flex: 1;
-    min-width: 0;
-    padding: 0 8px;
+  .sticky-left {
+    left: 12px;
+  }
+
+  .sticky-right {
+    right: 12px;
+  }
+
+  .sticky-left a,
+  .sticky-right a {
+    min-width: auto;
+    padding: 0 12px;
+    min-height: 42px;
+    font-size: 12px;
   }
 }
