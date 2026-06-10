@@ -783,6 +783,8 @@ h3 {
   gap: 1px;
   background: var(--line);
   border: 1px solid var(--line);
+  position: sticky;
+  top: 104px;
 }
 
 .location-item,
