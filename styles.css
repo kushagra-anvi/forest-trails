@@ -70,9 +70,40 @@ img {
   place-items: center;
   width: 42px;
   height: 42px;
-  border: 1px solid rgba(255, 255, 255, 0.45);
+  border: 1.5px solid var(--brass);
+  border-radius: 50%;
   color: var(--brass);
   font-weight: 800;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--paper);
+  padding: 8px;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.menu-toggle svg {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
+.badge-247 {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 900;
+  background: var(--brass);
+  color: var(--charcoal);
+  padding: 2px 10px;
+  border-radius: 99px;
+  vertical-align: middle;
+  margin-left: 12px;
+  font-family: Inter, ui-sans-serif, system-ui;
 }
 
 .brand strong,
@@ -841,7 +872,7 @@ h3 {
 
 .footer-content {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-columns: 1fr;
   gap: 28px;
   align-items: center;
   max-width: 1280px;
@@ -1047,8 +1078,40 @@ body.has-animations .reveal-scale.is-visible {
 }
 
 @media (max-width: 1120px) {
+  .menu-toggle {
+    display: block;
+  }
+
   .nav {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 74px;
+    left: 0;
+    right: 0;
+    background: rgba(15, 23, 19, 0.96);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+    padding: 0 clamp(18px, 4vw, 58px);
+    gap: 16px;
+    z-index: 49;
+    box-shadow: 0 12px 36px rgba(15, 23, 19, 0.35);
+    backdrop-filter: blur(18px);
+    
+    /* Animation base properties */
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transform: translateY(-10px);
+    transition: max-height 320ms cubic-bezier(0.4, 0, 0.2, 1), opacity 260ms ease, transform 320ms cubic-bezier(0.4, 0, 0.2, 1), padding 320ms ease;
+    pointer-events: none;
+  }
+
+  .nav.active {
+    max-height: 320px;
+    opacity: 1;
+    transform: translateY(0);
+    padding: 24px clamp(18px, 4vw, 58px);
+    pointer-events: auto;
   }
 
   .intro,

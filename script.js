@@ -69,3 +69,30 @@ if (!reduceMotion) {
   updateScrolledState();
   window.addEventListener("scroll", updateScrolledState, { passive: true });
 }
+
+// Mobile navigation menu toggle
+const menuToggle = document.getElementById("menu-toggle");
+const nav = document.querySelector(".nav");
+
+if (menuToggle && nav) {
+  menuToggle.addEventListener("click", () => {
+    nav.classList.toggle("active");
+    const isExpanded = nav.classList.contains("active");
+    menuToggle.setAttribute("aria-expanded", isExpanded);
+    menuToggle.innerHTML = isExpanded ? '<i data-lucide="x"></i>' : '<i data-lucide="menu"></i>';
+    if (window.lucide) {
+      window.lucide.createIcons();
+    }
+  });
+
+  // Close menu when clicking nav links
+  nav.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      nav.classList.remove("active");
+      menuToggle.innerHTML = '<i data-lucide="menu"></i>';
+      if (window.lucide) {
+        window.lucide.createIcons();
+      }
+    });
+  });
+}

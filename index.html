@@ -9,20 +9,26 @@
   </head>
   <body>
     <header class="topbar">
-      <a class="brand" href="#home" aria-label="Forest Trails Bhugaon home">
-        <span class="brand-mark">FT</span>
-        <span>
-          <strong>Paranjape Forest Trails</strong>
-          <small>Bhugaon, Pune</small>
+      <a class="brand" href="#home" aria-label="Forest Trails Bhugaon home" style="display: inline-flex; align-items: center; gap: 18px; min-width: auto;">
+        <img src="assets/logo.png" alt="Paranjape logo symbol" class="brand-logo" style="height: 46px; width: auto; object-fit: contain; display: block;">
+        <span style="display: flex; flex-direction: column; justify-content: space-between; height: 46px; padding: 1px 0;">
+          <strong style="font-family: Georgia, serif; font-size: 18px; font-weight: 600; letter-spacing: 0.5px; color: #ffffff; line-height: 1;">PARANJAPE</strong>
+          <small style="font-size: 11px; font-weight: 800; color: var(--brass); letter-spacing: 1px; text-transform: uppercase; line-height: 1;">FOREST TRAILS</small>
+          <small style="font-size: 9px; font-weight: 600; color: rgba(255, 255, 255, 0.55); line-height: 1;">Bhugaon, Pune</small>
         </span>
       </a>
 
       <nav class="nav" aria-label="Primary navigation">
         <a href="#overview">Overview</a>
+        <a href="#collection">Projects</a>
         <a href="#amenities">Amenities</a>
         <a href="#location">Location</a>
         <a href="#contact">Contact Us</a>
       </nav>
+
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation">
+        <i data-lucide="menu"></i>
+      </button>
     </header>
 
     <main id="home">
@@ -72,42 +78,8 @@
           <p>Compare the available residential formats inside Forest Trails Bhugaon before requesting current details and visit support.</p>
         </div>
 
-        <div class="featured-residence">
-          <img src="assets/showcase/highgardens-elevation.jpg" alt="Highgardens residential tower at Forest Trails Township">
-          <div>
-            <p class="eyebrow">Featured</p>
-            <h3>Highgardens At Forest Trails Township</h3>
-            <p>Premium terrace garden residences with 2, 3 and 4 BHK options, positioned for buyers who want a stronger apartment-led lifestyle inside Forest Trails Bhugaon.</p>
-            <div class="featured-price">
-              <span>Price Guidance</span>
-              <strong>Starting from Rs. 92 Lakhs*</strong>
-            </div>
-          </div>
-        </div>
-
         <div class="project-grid">
-          <article class="project-card">
-            <img src="assets/brochures/everglades.jpg" alt="Everglades brochure cover">
-            <div>
-              <p class="card-label">Premium Apartments</p>
-              <h3>Everglades</h3>
-              <p>1 & 2 BHK forest-view residences inside Forest Trails Township.</p>
-              <strong>Rs. 43.99 L* onwards</strong>
-              <a href="#contact">Check Availability</a>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <img src="assets/brochures/the-cove.jpg" alt="The Cove Twin Villas brochure cover">
-            <div>
-              <p class="card-label">Twin Villas</p>
-              <h3>The Cove</h3>
-              <p>4 BHK premium twin-villa living in a low-density environment.</p>
-              <strong>Rs. 2.90 Cr* onwards</strong>
-              <a href="assets/brochures/the-cove-brochure.pdf" target="_blank" rel="noreferrer">Download Brochure</a>
-            </div>
-          </article>
-
+          <!-- Card 1: Athashri -->
           <article class="project-card">
             <img src="assets/brochures/athashri.jpg" alt="Athashri Bhugaon brochure cover">
             <div>
@@ -115,10 +87,35 @@
               <h3>Athashri Bhugaon</h3>
               <p>2 & 2.5 BHK purpose-built senior living within the Forest Trails Township environment.</p>
               <strong>Starting from Rs. 72 L*</strong>
-              <a href="assets/brochures/athashri-brochure.pdf" target="_blank" rel="noreferrer">Download Brochure</a>
+              <a href="tel:+917066787989">Know More</a>
             </div>
           </article>
 
+          <!-- Card 2: Everglades -->
+          <article class="project-card">
+            <img src="assets/brochures/everglades.jpg" alt="Everglades brochure cover">
+            <div>
+              <p class="card-label">Premium Apartments</p>
+              <h3>Everglades</h3>
+              <p>1 & 2 BHK forest-view residences inside Forest Trails Township.</p>
+              <strong>Rs. 43.99 L* onwards</strong>
+              <a href="tel:+917066787989">Know More</a>
+            </div>
+          </article>
+
+          <!-- Card 3: Highgardens -->
+          <article class="project-card">
+            <img src="assets/showcase/highgardens-elevation.jpg" alt="Highgardens residential tower at Forest Trails Township">
+            <div>
+              <p class="card-label">Terrace Garden Residences</p>
+              <h3>Highgardens</h3>
+              <p>Premium terrace garden residences with 2, 3 and 4 BHK options, inside Forest Trails Township.</p>
+              <strong>Starting from Rs. 92 L*</strong>
+              <a href="tel:+917066787989">Know More</a>
+            </div>
+          </article>
+
+          <!-- Card 4: The Canopy -->
           <article class="project-card">
             <img src="assets/brochures/canopy.jpg" alt="The Canopy brochure cover">
             <div>
@@ -126,32 +123,35 @@
               <h3>The Canopy</h3>
               <p>Elevated 2 & 3 BHK residences overlooking the green township landscape.</p>
               <strong>Starting from Rs. 98 L* all inclusive</strong>
-              <a href="assets/brochures/canopy-brochure.pdf" target="_blank" rel="noreferrer">Download Brochure</a>
+              <a href="tel:+917066787989">Know More</a>
             </div>
           </article>
 
+          <!-- Card 5: The Cove -->
           <article class="project-card">
-            <img src="assets/brochures/rivolo.jpg" alt="Rivolo brochure cover">
+            <img src="assets/brochures/the-cove.jpg" alt="The Cove Twin Villas brochure cover">
+            <div>
+              <p class="card-label">Twin Villas</p>
+              <h3>The Cove</h3>
+              <p>4 BHK premium twin-villa living in a low-density environment.</p>
+              <strong>Rs. 2.90 Cr* onwards</strong>
+              <a href="tel:+917066787989">Know More</a>
+            </div>
+          </article>
+
+          <!-- Card 6: Rivolo -->
+          <article class="project-card">
+            <img src="assets/brochures/rivolo.png" alt="Rivolo brochure cover">
             <div>
               <p class="card-label">Premium Villas</p>
               <h3>The Rivolo</h3>
               <p>4 BHK private residences in the Forest Trails Township setting.</p>
               <strong>Starting from Rs. 4.70 Cr* all inclusive</strong>
-              <a href="assets/brochures/rivolo-brochure.pdf" target="_blank" rel="noreferrer">Download Brochure</a>
+              <a href="tel:+917066787989">Know More</a>
             </div>
           </article>
         </div>
         <p class="price-note">*Price guidance indicates basic cost + taxes and is subject to change.</p>
-      </section>
-
-      <section class="masterplan" id="masterplan">
-        <div class="section-heading centered">
-          <p class="eyebrow">Masterplan</p>
-          <h2>Forest Trails Township Master Plan</h2>
-        </div>
-        <div class="masterplan-image">
-          <img src="assets/showcase/township-masterplan.jpg" alt="Forest Trails Township masterplan">
-        </div>
       </section>
 
       <section class="section amenities" id="amenities">
@@ -224,6 +224,16 @@
         </div>
       </section>
 
+      <section class="masterplan" id="masterplan">
+        <div class="section-heading centered">
+          <p class="eyebrow">Masterplan</p>
+          <h2>Forest Trails Township Master Plan</h2>
+        </div>
+        <div class="masterplan-image">
+          <img src="assets/showcase/township-masterplan.jpg" alt="Forest Trails Township masterplan">
+        </div>
+      </section>
+
       <section class="section location" id="location">
         <div>
           <p class="eyebrow">Location</p>
@@ -231,6 +241,24 @@
           <p>
             Positioned near the Bhugaon and Paud Road side of Pune, the address offers quieter surroundings while remaining connected to Bavdhan, Kothrud, Chandani Chowk, schools, clinics, retail, and daily essentials.
           </p>
+          <div class="map-container" style="margin-top: 24px; border: 1px solid var(--line);">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.743126749007!2d73.7483664!3d18.4952044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bec7af3a2a35%3A0xe5a3c613bf7bf4c2!2sForest%20Trails%20Township!5e0!3m2!1sen!2sin!4v1717900000000!5m2!1sen!2sin" 
+              width="100%" 
+              height="350" 
+              style="border:0; display: block;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+            <a href="https://wa.me/917066787989?text=Hello%2C%20please%20share%20the%20Google%20Map%20location%20for%20Forest%20Trails%20Bhugaon." 
+               target="_blank" 
+               rel="noreferrer" 
+               style="display: flex; align-items: center; justify-content: center; gap: 10px; background: #25d366; color: white; padding: 12px; font-weight: bold; text-align: center;">
+               <i data-lucide="message-square"></i>
+               <span>Get Location on WhatsApp</span>
+            </a>
+          </div>
         </div>
         <div class="location-list">
           <div class="location-item">
@@ -272,6 +300,7 @@
         <div class="final-copy">
           <p class="eyebrow">Contact Us</p>
           <h2>For More Enquiry, Connect With Us</h2>
+          <p style="color: var(--brass); font-weight: 800; font-size: 14px; margin-top: -10px; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 1.2px;">24/7 Support</p>
           <p>Share your name and number to receive a callback for Paranjape Forest Trails Bhugaon.</p>
           <div class="contact-lines">
             <a href="tel:+917066787989">7066787989</a>
@@ -296,16 +325,13 @@
     </main>
 
     <footer class="footer">
+      <div class="footer-scanners" style="text-align: center; margin-bottom: 30px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 30px;">
+        <p style="color: rgba(255,255,255,0.6); font-size: 13px; font-weight: 800; text-transform: uppercase; margin-bottom: 15px; letter-spacing: 1px;">MahaRERA Project Registrations</p>
+        <img src="assets/rera-qrs.jpeg" alt="MahaRERA Project Registration QR Codes" style="max-width: 100%; height: auto; border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 4px;">
+      </div>
       <div class="footer-content">
         <div class="footer-disclaimer">
           <p><strong>Disclaimer:</strong> The information contained on this website is for informational purposes only and does not constitute an offer or solicitation. Project details, prices, specifications, and availability are subject to change without prior notice. Images are for illustrative purposes only. This website is managed by an authorized Channel Partner of the developer for marketing purposes. Prospective buyers are advised to verify all details directly with the developer before making any purchase decision. All Rights Reserved.</p>
-        </div>
-        <div class="footer-rera">
-          <div class="rera-info">
-            <strong>Agent RERA No: A031262400296</strong>
-            <span>Vastubandh Properties</span>
-          </div>
-          <img src="assets/rera-qr.png" alt="MahaRERA Agent Registration QR Code" class="rera-qr-img">
         </div>
       </div>
     </footer>
