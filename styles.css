@@ -50,11 +50,11 @@ img {
   align-items: center;
   justify-content: space-between;
   gap: 22px;
-  min-height: 74px;
+  min-height: 90px;
   padding: 14px clamp(18px, 4vw, 58px);
-  color: var(--paper);
-  background: rgba(15, 23, 19, 0.82);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+  color: var(--ink);
+  background: rgba(225, 227, 224, 0.92);
+  border-bottom: 1px solid rgba(22, 27, 23, 0.08);
   backdrop-filter: blur(18px);
 }
 
@@ -81,7 +81,7 @@ img {
   display: none;
   background: none;
   border: none;
-  color: var(--paper);
+  color: var(--ink);
   padding: 8px;
   cursor: pointer;
   z-index: 100;
@@ -120,7 +120,7 @@ img {
 
 .brand small {
   margin-top: 1px;
-  color: rgba(255, 255, 255, 0.68);
+  color: rgba(22, 27, 23, 0.68);
   font-size: 12px;
   font-weight: 600;
 }
@@ -128,14 +128,20 @@ img {
 .nav {
   display: flex;
   gap: clamp(14px, 2vw, 26px);
-  color: rgba(255, 255, 255, 0.78);
-  font-size: 13px;
+  color: rgba(22, 27, 23, 0.68);
+  font-size: 14.5px;
   font-weight: 700;
 }
 
 .nav a {
   position: relative;
   padding: 8px 0;
+  color: var(--ink);
+  transition: color 180ms ease;
+}
+
+.nav a:hover {
+  color: #b3302a;
 }
 
 .nav a::after {
@@ -883,6 +889,8 @@ h3 {
 
 .footer-disclaimer {
   max-width: 980px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .footer p {
@@ -947,16 +955,12 @@ h3 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 108px;
-  min-height: 46px;
-  padding: 0 18px;
+  width: 52px;
+  height: 52px;
   color: var(--paper);
-  border-radius: 0;
+  border-radius: 50%;
   box-shadow: 0 8px 24px rgba(15, 23, 19, 0.22);
-  font-size: 13px;
-  font-weight: 900;
   border: 1px solid rgba(255, 255, 255, 0.12);
-  letter-spacing: 0.2px;
 }
 
 .sticky-right .btn-call {
@@ -986,8 +990,8 @@ body.has-animations .sticky-right {
 }
 
 body.has-animations.is-scrolled .topbar {
-  background: rgba(15, 23, 19, 0.94);
-  box-shadow: 0 16px 45px rgba(9, 13, 11, 0.2);
+  background: rgba(220, 222, 218, 0.96);
+  box-shadow: 0 10px 30px rgba(15, 23, 19, 0.08);
 }
 
 body.has-animations .reveal {
@@ -1088,15 +1092,15 @@ body.has-animations .reveal-scale.is-visible {
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 74px;
+    top: 90px;
     left: 0;
     right: 0;
-    background: rgba(15, 23, 19, 0.96);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+    background: rgba(225, 227, 224, 0.98);
+    border-bottom: 1px solid rgba(22, 27, 23, 0.08);
     padding: 0 clamp(18px, 4vw, 58px);
     gap: 16px;
     z-index: 49;
-    box-shadow: 0 12px 36px rgba(15, 23, 19, 0.35);
+    box-shadow: 0 10px 30px rgba(15, 23, 19, 0.08);
     backdrop-filter: blur(18px);
     
     /* Animation base properties */
@@ -1145,7 +1149,7 @@ body.has-animations .reveal-scale.is-visible {
 
 @media (max-width: 720px) {
   .topbar {
-    min-height: 68px;
+    min-height: 80px;
   }
 
   .brand {
@@ -1257,9 +1261,7 @@ body.has-animations .reveal-scale.is-visible {
 
   .sticky-left a,
   .sticky-right a {
-    min-width: auto;
-    padding: 0 12px;
-    min-height: 42px;
-    font-size: 12px;
+    width: 48px;
+    height: 48px;
   }
 }

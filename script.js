@@ -9,7 +9,7 @@ forms.forEach((form) => {
     const name = formData.get("name") || "Customer";
     const phone = formData.get("phone") || "";
     const text = encodeURIComponent(
-      `Hello, I'm interested in forest trail.\nName: ${name}\nPhone: ${phone}`
+      `Hello, I'm interested in Paranjape ForestTrails.\nName: ${name}\nPhone: ${phone}`
     );
 
     window.location.href = `https://wa.me/917066787989?text=${text}`;
